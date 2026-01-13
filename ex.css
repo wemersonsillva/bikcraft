@@ -16,7 +16,15 @@ img {
 a {
   text-decoration: none;
 }
+.menu a:hover {
+  border: 2px solid #e21;
+}
 
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
 p,
 h1,
 h2,
@@ -28,6 +36,11 @@ p {
   font-size: 20px;
   line-height: 1.3;
 }
+.header {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
+}
 
 .menu {
   display: flex;
@@ -36,11 +49,13 @@ p {
   justify-content: center;
 }
 .menu a {
+  display: block;
   background: #ffffff;
   padding: 15px 30px;
   border-radius: 4px;
   color: #000000;
   text-transform: uppercase;
+  border: 2px solid #ffffff;
 }
 
 .conteiner {
@@ -75,7 +90,9 @@ p {
   border-radius: 4px;
   text-decoration: none;
 }
-
+.botao:hover {
+  background: #900;
+}
 .subtitulo {
   font-size: 64px;
   text-transform: uppercase;
@@ -94,10 +111,15 @@ p {
   grid-template-columns: auto 1fr;
   gap: 10px 20px;
   padding: 20px;
+  border: 4px solid #ffffff;
 }
 
 .vantagens-itens p {
   grid-column: 2;
+}
+
+.vantagens-itens:hover {
+  border-left: 4px solid #eb1f10;
 }
 .rodape {
   background-color: #ffffff;
@@ -105,4 +127,10 @@ p {
   text-align: center;
   box-sizing: border-box;
   padding: 40px;
+}
+
+@media (max-width: 600px) {
+  .conteiner {
+    grid-template-columns: 1fr;
+  }
 }
